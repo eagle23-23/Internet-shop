@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: white;
+  color: rgb(20, 18, 18);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+}
+
+.container {
+  width: 1280px;
+  margin: 50px auto;
+}
+
+header{
+  position: relative;
+}
+
+header .logo{
+  font-weight: 600;
+  font-size: 20px;
+
+}
+
+header ul.nav{
+  float: right;
+  list-style: none;
+}
+
+header ul.nav li{
+  cursor: pointer;
+  display: inline;
+  margin-left: 20px;
+  font-weight: 300;
+  transition: opacity 500ms ease;
+}
+
+header ul.nav li:hover{
+  opacity: 0.5;
+  color: rgb(39, 27, 211)
+}
+
+header .shoppingCart{
+  float: right;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+
+header .itemsInShop{
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+
+}
+header .itemsInShop img{
+  width: 70px;
+  float: left;
+  margin-right: 20px;
+}
+
+header .itemsInShop p{
+  font-weight: 600;
+  color: #363636;
+}
+
+header .itemsInShop h2{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+header .empty{
+  font-size: 10px;
+  margin-bottom: 20px;
+}
+
+header .shoppingCart:hover, 
+header .shoppingCart.active{
+  color: rgb(168, 5, 5);
+  transform: scale(1.5);
+}
+
+header .shoppingCartDisplay{
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 400px;
+  background: rgb(212, 210, 210);
+  -webkit-box-shadow: 13px 13px 8px -13px rgba(34, 60, 80, 0.14);
+  -moz-box-shadow: 13px 13px 8px -13px rgba(34, 60, 80, 0.14);
+  box-shadow: 13px 13px 8px -13px rgba(34, 60, 80, 0.14);
+  z-index: 100;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+header .deleteButton{
+  color: #740202;
+  float: right;
+  position: relative;
+  top: -40px;
+  cursor: pointer;
+  transition: color, transform 500ms ease;
+}
+
+header .deleteButton:hover{
+  color: #c70202;
+  transform: scale(1.5);
+}
+
+header .cost{
+  float: left;
+  width: 100%;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+
+header .presentation{
+  margin: 50px 0;
+  width: 100%;
+  height: 500px;
+  background: url(./assets/facilityImg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-blend-mode: multiply;
+  background-color: rgb(165, 165, 165);
+  position: relative;
+}
+
+header .presentation::after{
+  content: 'The best facilities in EU!';
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  width: 300px;
+  font-size: 40px;
+  font-weight: 600;
+  color: aliceblue;
+}
+
+header .presentation::before{
+  content: 'Sales for everyone till first purchase';
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  width: 300px;
+  font-size: 20px;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+}
+
+
+.catsForShop div{
+  display: inline-block;
+  background: white;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  margin-right: 15px;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+.catsForShop div:hover{
+  border-color: silver;
+  transform: scale(1.5s);
+
+}
+
+
+/*body*/
+
+.fullItem{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.452);
+  z-index: 200;
+  overflow: auto;
+}
+
+.fullItem > div{
+  width: 600px;
+  position: relative;
+  margin: 10% auto;
+  padding: 40px 30px;
+  background: white;
+  border-radius: 9px;
+}
+
+main{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+main .item{
+  width: 30%;
+  margin-bottom: 50px;
+  background: rgb(182, 182, 182);
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+main .item img, .fullItem img{
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  transition: transform 500ms ease;
+  height: 350px;
+  cursor: pointer;
+}
+
+main .item img:hover, .fullItem img:hover{
+  transform: scale(1.05);
+}
+
+main h2, .fullItem h2, main p, .fullItem p, main b, .fullItem b{
+  padding: 3px 0;
+  margin: 10px, 20px;
+  color: #333;
+  margin-left: 20px;
+}
+
+main b, .fullItem b{
+  color: #5FA36A;
+}
+
+main .addToCard,
+.fullItem .addToCard{
+  font-weight: 600;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background: rgb(139, 4, 4);
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 500ms ease;
+}
+
+main .addToCard:hover,
+.fullItem .addToCard:hover{
+  background: rgb(75, 1, 1);
+  transform: scale(1.05);
+}
+
+
+footer{
+  text-align: center;
+  margin-top: 100px;
+}
+
+
